@@ -6,7 +6,7 @@ public:
     int strToInt(string str)
     {
         int n = str.length() - 1;
-        int t = 1, ans=0;
+        int t = 1, ans = 0;
         bool flag = false;
         for (int i = n; i >= 0; i--)
         {
@@ -17,7 +17,7 @@ public:
             }
             else if (str[i] >= '1' && str[i] <= '9')
             {
-                flag=true;
+                flag = true;
                 int tmp = (int)str[i];
                 tmp -= 48;
                 ans += tmp * t;
@@ -25,7 +25,8 @@ public:
             }
             else if (flag == false)
                 continue;
-                else break;
+            else
+                break;
         }
         return ans;
     }
